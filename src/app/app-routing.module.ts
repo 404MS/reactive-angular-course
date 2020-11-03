@@ -5,6 +5,7 @@ import {AboutComponent} from './about/about.component';
 import {CourseComponent} from './course/course.component';
 import {LoginComponent} from './login/login.component';
 import {SearchLessonsComponent} from './search-lessons/search-lessons.component';
+import { RandomComponent } from './random/random.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'random',
+    component: RandomComponent
   },
   {
     path: '**',
