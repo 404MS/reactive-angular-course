@@ -17,7 +17,10 @@ import {MessagesComponent} from './messages/messages.component';
 import {SearchLessonsComponent} from './search-lessons/search-lessons.component';
 import { LoadingComponent } from './loading/loading.component';
 import { RandomComponent } from './random/random.component';
-import { MaterialModule } from './material/material.module'
+import { MaterialModule } from './material/material.module';
+
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { MaterialModule } from './material/material.module'
     AppRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    CKEditorModule,
+    QuillModule.forRoot(),
   ],
   providers: [
   ],

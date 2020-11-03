@@ -1,4 +1,14 @@
 <section class="mat-typography">
   <p>random works!</p>
+  <mat-card class="editor-space">
+    <mat-card-content>
+      <ckeditor [editor]="ckEditor" data="<p>Hello, world!</p>"></ckeditor>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="editor-space">
+    <mat-card-content>
+      <quill-editor></quill-editor>
+    </mat-card-content>
+  </mat-card>
 </section>
 
