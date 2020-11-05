@@ -1,14 +1,23 @@
-<section class="mat-typography">
-  <p>random works!</p>
-  <mat-card class="editor-space">
-    <mat-card-content>
-      <ckeditor [editor]="ckEditor" data="<p>Hello, world!</p>"></ckeditor>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="editor-space">
-    <mat-card-content>
-      <quill-editor></quill-editor>
-    </mat-card-content>
-  </mat-card>
-</section>
+
+<div class="container">
+  <div class="quill-space">
+      <h1 class="mat-h1">
+        Quill JS
+      </h1>
+      
+      <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="editor"><h3 class="mat-h3">Input</h3></label>
+        </div>
+        <quill-editor [styles]="editorStyle" [modules]="config" formControlName="editor" [readOnly]="false" placeholder="Ingrese su respuesta"></quill-editor>
+        <button mat-raised-button color="primary" style="margin-top: 10px">Submit</button>
+      </form>
+
+      <h2 class="mat-h2" style="margin-top: 15px;">Output</h2>
+
+      <quill-view [content]="content" class="content-view" ></quill-view>
+    </div>
+</div>
+
+
 
